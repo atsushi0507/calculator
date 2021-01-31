@@ -26,5 +26,5 @@ pip3 install numpy matplotlib
 
 実行方法:
 ```
-python3 LMS.py
+python3 LSM.py
 ```
