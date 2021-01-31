@@ -33,6 +33,9 @@ for i in range(len(x_data)):
 sx2 = sx2 / n
 sy2 = sy2 / n
 
+# Error
+error_y = math.sqrt(sy2 / (n-1))
+
 # Calculate covariance
 cov = 0
 for i in range(len(x_data)):
@@ -59,11 +62,13 @@ y = a * x + b
 plt.plot(x, y, linestyle="dashed")
 # Actual data point
 plt.scatter(x_data, y_data, c="orange")
+plt.errorbar(x_data, y_data, yerr = error_y, capsize=5, fmt='o', markersize=5, ecolor='black', markeredgecolor = "black", color='w')
 # Add text to the plot
 if (b > 0):
     label = "y={}x+{}".format(a,b)
 else:
     label = "y={}x{}".format(a,b)
 plt.text(80, 10, label)
-# Show plot
-plt.show()
+
+# Save figure
+plt.savefig("linearFit.png")
