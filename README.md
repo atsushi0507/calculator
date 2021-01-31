@@ -25,6 +25,7 @@ pip3 install numpy matplotlib
 エラーバーの付け方:
 ```math
 \text{error} = \sqrt{\frac{1}{n-1}\int(f(x)-y)^2}
+error = √(1/n-1)Σ(f(x)-y)^2
 ```
 
 実行方法:
