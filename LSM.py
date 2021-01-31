@@ -29,7 +29,7 @@ for i in range(len(x_data)):
     sx2 += dev_x[i]*dev_x[i]
     sy2 += dev_y[i]*dev_y[i]
 
-# Calculate spread of x
+# Calculate variance of x
 sx2 = sx2 / n
 sy2 = sy2 / n
 
