@@ -23,10 +23,7 @@ pip3 install numpy matplotlib
 今はデータをコードに直書きしているが、コマンドラインから与えて配列に詰めるように拡張することも可能。
 データ点と最小二乗法で求めた直線をプロットできる状態。
 エラーバーの付け方:
-```math
-\text{error} = \sqrt{\frac{1}{n-1}\int(f(x)-y)^2}
-error = √(1/n-1)Σ(f(x)-y)^2
-```
+![error_bar](error.pdf)
 
 実行方法:
 ```
