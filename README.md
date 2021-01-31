@@ -23,7 +23,7 @@ pip3 install numpy matplotlib
 今はデータをコードに直書きしているが、コマンドラインから与えて配列に詰めるように拡張することも可能。
 データ点と最小二乗法で求めた直線をプロットできる状態。
 エラーバーの付け方:
-![error bar](img/error.png)
+![error](https://user-images.githubusercontent.com/11633979/106389729-3aa08580-6428-11eb-979e-a42a7155638a.png)
 
 実行方法:
 ```
