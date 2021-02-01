@@ -10,8 +10,18 @@ useN = args.yes
 
 ### Sample data
 # Data range: 0 =< x, y =< 100
+"""
 x_data = [50, 60, 70, 80, 90]
 y_data = [40, 70, 90, 60, 100]
+"""
+x = input("Input x values separated by comma: ")
+y = input("Input y values separated by comma: ")
+
+x_data = x.split(",")
+y_data = y.split(",")
+
+x_data = [float(x) for x in x_data]
+y_data = [float(y) for y in y_data]
 
 # Calculate mean x and y
 n = len(x_data)
@@ -75,9 +85,9 @@ plt.scatter(x_data, y_data, c="orange")
 plt.errorbar(x_data, y_data, yerr = error_y, capsize=5, fmt='o', markersize=5, ecolor='black', markeredgecolor = "black", color='w')
 # Add text to the plot
 if (b > 0):
-    label = "y={}x+{}".format(a,b)
+    label = "y={:.2f}x+{:.2f}".format(a,b)
 else:
-    label = "y={}x{}".format(a,b)
+    label = "y={:.2f}x{:.2f}".format(a,b)
 plt.text(80, 10, label)
 
 # Save figure
