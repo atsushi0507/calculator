@@ -1,6 +1,12 @@
 import math
 import matplotlib.pyplot as plt
 import numpy as np
+import argparse
+
+p = argparse.ArgumentParser()
+p.add_argument("-y", "--yes", help="If this flag is used, the error is devided by N", action="store_true")
+args = p.parse_args()
+useN = args.yes
 
 ### Sample data
 # Data range: 0 =< x, y =< 100
@@ -34,7 +40,11 @@ sx2 = sx2 / n
 sy2 = sy2 / n
 
 # Error
-error_y = math.sqrt(sy2 / (n-1))
+if (useN):
+    error_y = math.sqrt(sy2 / (n))
+else:
+    error_y = math.sqrt(sy2 / (n-1))
+
 
 # Calculate covariance
 cov = 0
